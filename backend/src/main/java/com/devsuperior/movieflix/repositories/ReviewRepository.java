@@ -16,4 +16,6 @@ public interface ReviewRepository extends JpaRepository<Review, Long>{
 			+ "WHERE obj.movie.id = :movieId")
 	List<ReviewDTO> findReviews(Long movieId);
 
+	
+	
 }

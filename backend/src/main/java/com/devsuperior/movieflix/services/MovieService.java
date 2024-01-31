@@ -1,5 +1,6 @@
 package com.devsuperior.movieflix.services;
 
+import java.io.Serializable;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,8 @@ import com.devsuperior.movieflix.repositories.MovieRepository;
 import com.devsuperior.movieflix.services.exceptions.ResourceNotFoundException;
 
 @Service
-public class MovieService {
+public class MovieService implements  Serializable {
+	private static final long serialVersionUID = 1L;
 
 	@Autowired
 	private MovieRepository repository;
