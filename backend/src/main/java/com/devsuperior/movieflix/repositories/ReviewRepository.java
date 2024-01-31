@@ -11,9 +11,9 @@ import com.devsuperior.movieflix.entities.Review;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long>{
-
-	@Query("SELECT obj FROM Review obj WHERE "
-			+ "(obj.movie.id = :movieId)")
+	
+	@Query("SELECT new com.devsuperior.movieflix.dto.ReviewDTO(obj) FROM Review obj "
+			+ "WHERE obj.movie.id = :movieId")
 	List<ReviewDTO> findReviews(Long movieId);
 
 }

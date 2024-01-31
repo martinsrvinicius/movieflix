@@ -27,11 +27,11 @@ public class Movie implements Serializable{
 	private Long id;
 	private String title;
 	
-	@JsonProperty("sub_Title")
+	@Column(name = "sub_Title")
 	private String subTitle;
 	private Integer year;
 	
-	@JsonProperty("img_Url")
+	@Column(name = "img_Url")
 	private String imgUrl;
 	
 	@Column(columnDefinition = "TEXT")
